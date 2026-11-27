@@ -36,7 +36,7 @@ No CPU emulation. sludgemu loads the console's x64 code directly and rebuilds th
 > need your own legally obtained, decrypted title package. Issues or PRs that contain GDK material,
 > title files or links to them will be closed.
 
-## 🧠 How it works
+## How it works
 
 An Xbox Series X|S ("Scarlett") title is an **x64 Windows PE image** built against the console
 flavour of the Microsoft GDK. The CPU is a Zen 2, and the code is ordinary MSVC-compiled x64. The
@@ -49,7 +49,7 @@ implementation, called an **HLE module**:
 
 ```mermaid
 flowchart LR
-    T["🎮 Title<br/>(x64 PE image)"]
+    T[" Title<br/>(x64 PE image)"]
 
     subgraph S["sludgemu.exe"]
         direction TB
@@ -93,7 +93,7 @@ flowchart LR
 | **System services** | Implements the Game Runtime: task queues, async blocks, users, package, store, game saves, system info, and frame pacing. |
 | **Presentation** | The title gets a normal resizable desktop window with borderless fullscreen. Its scene and HUD planes are composited and letterboxed to 16:9. |
 
-## 📊 Status
+##  Status
 
 | Area | State | Notes |
 |---|:---:|---|
@@ -180,7 +180,7 @@ The NuGet packages are checked against SHA-256 hashes. The build copies the runt
 
 </details>
 
-## ▶️ Running
+##  Running
 
 ```
 sludgemu.exe [options] <package directory | title exe> [-- title arguments]
@@ -226,7 +226,7 @@ GPU**, and as a **Series S** otherwise, which is the lighter option. Use `--mode
 | `sludgemu_crash.dmp`, next to the exe | Minidump written on a crash |
 | `%LOCALAPPDATA%\sludgemu\<title id>\PersistentLocalStorage\` | The title's persistent local storage |
 
-## 🩺 Diagnostics
+##  Diagnostics
 
 These environment variables turn on heavier debugging features:
 
